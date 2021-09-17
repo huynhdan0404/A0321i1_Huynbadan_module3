@@ -68,8 +68,8 @@ create table product_order(
 order_number int not null,
 product_code varchar(15) not null,
 primary key(order_number,product_code),
-foreign key (order_number) references offices(order_number),
-foreign key (product_code) references offices(product_code)
+foreign key (order_number) references orders (order_number),
+foreign key (product_code) references products (product_code)
 );
 
 

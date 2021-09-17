@@ -12,5 +12,3 @@ primary key(id)
 select * from hoc_vien where hoc_vien.ten = "huong";
 
 select sum(hoc_vien.so_tien) from hoc_vien where hoc_vien.ten = "huong";
-
-select * from hoc_vien where 

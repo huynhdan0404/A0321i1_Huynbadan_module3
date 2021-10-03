@@ -177,6 +177,35 @@ inner join loai_khach on khach_hang.id_loaikhach = loai_khach.id_loaikhach
 where loai_khach.ten_loai_khach = "diamond" and khach_hang.dia_chi in ("vinh", "quảng ngãi");    
 
 -- yeu cau 12---
+select  hop_dong.id_hopdong, khach_hang.ho_ten, khach_hang.sdt, dich_vu.ten_dichvu, hop_dong_chi_tiet.so_luong, hop_dong.ngay_lam_hop_dong, hop_dong.tien_dat_coc 
+from khach_hang inner join hop_dong on khach_hang.id_khachhang = hop_dong.id_khachhang
+inner join dich_vu on hop_dong.id_dichvu = dich_vu.id_dichvu
+inner join hop_dong_chi_tiet on hop_dong.id_hopdong = hop_dong_chi_tiet.id_hopdong
+where exists(select hop_dong.id_hopdong from hop_dong where (hop_dong.ngay_lam_hop_dong between "2019-10-01" and "2019-12-30") and hop_dong.id_dichvu = dich_vu.id_dichvu )
+and not exists (select hop_dong.id_hopdong from hop_dong where (hop_dong.ngay_lam_hop_dong between "2019-01-01" and "2019-06-30") and hop_dong.id_dichvu = dich_vu.id_dichvu);
+
+-- yeu cau 13--
+select sum(hop_dong_chi_tiet.so_luong) as "so_lan_su_dung", dich_vu_di_kem.*
+from dich_vu_di_kem inner join hop_dong_chi_tiet on dich_vu_di_kem.id_dichvudikem = hop_dong_chi_tiet.id_hopdongchitiet
+group by hop_dong_chi_tiet.id_dichvudikem
+limit 1;
+
+-- yeu cau 14---
+select dich_vu_di_kem.*, sum(hop_dong_chi_tiet.so_luong) as "so_lan_su_dung"
+from dich_vu_di_kem inner join hop_dong_chi_tiet on dich_vu_di_kem.id_dichvudikem = hop_dong_chi_tiet.id_dichvudikem
+group by dich_vu_di_kem.id_dichvudikem having sum(hop_dong_chi_tiet.so_luong) = 1;
+
+-- yeu cau 15----
+select nhan_vien.*, count(hop_dong.id_nhanvien) as nang_suat
+from nhan_vien inner join hop_dong on nhan_vien.id_nhanvien = hop_dong.id_nhanvien
+where year(hop_dong.ngay_lam_hop_dong) in ("2018", "2019")
+group by hop_dong.id_nhanvien having count(hop_dong.id_nhanvien) = 3;
+
+-- yeu cau 16--
+
+
+
+
 
 
 

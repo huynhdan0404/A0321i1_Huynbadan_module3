@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        .row::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        [class*="col-"]{
+            float: left;
+        }
+        .col-1 {width: 8.33%; }
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%; }
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .Col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10{width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+
+        .header{
+            background-color: #B7B7B7;
+            height: 50px;
+        }
+        .header h2{
+            padding: 10px;
+        }
+        .header span{
+            background-color: red;
+            color: white;
+        }
+        .menu{
+            height: 30px;
+            background-color: #B7B7B7;
+            padding: 5px;
+            margin: 3px;
+            text-align: center;
+        }
+        .left-content{
+            padding: 20px;
+        }
+        .right-content{
+            padding: 20px;
+        }
+        iframe{
+            width: 100%;
+            height: auto;
+            padding: 15px 0;
+        }
+        .right-content iframe{
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Phim <span>Hoạt Hình</span></h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu">
+            <div class="row">
+                <div class="col-12">
+                    <p>Phim hoạt hình | Phim hoạt hình yêu thích | Nhân vật hoạt hình | Góp ý</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="row">
+                <div class="col-4">
+                    <div class="row left-content">
+                        <div class="col-12">
+                            <iframe src="https://www.youtube.com/embed/q2o3UZCBg7w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <p><b>phim hoạt hình doraemon</b></p>
+                            <p>Chanel Fun</p>
+                        </div>
+                        <div class="col-12">
+                            <iframe src="https://www.youtube.com/embed/q2o3UZCBg7w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <p><b>phim hoạt hình doraemon</b></p>
+                            <p>Chanel Fun</p>
+                        </div>
+                        <div class="col-12">
+                            <iframe src="https://www.youtube.com/embed/q2o3UZCBg7w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <p><b>phim hoạt hình doraemon</b></p>
+                            <p>Chanel Fun</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8">
+                    <div class="row right-content">
+                        <div class="col-12">
+                            <iframe src="https://www.youtube.com/embed/q2o3UZCBg7w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <p><b>Tớ là Mari</b></p>
+                            <P>tác giả</P>
+                            <p>Chúng ta vẫn biết rằng, làm việc với một đoạn văn bản dễ đọc và rõ nghĩa dễ gây rối trí và cản trở việc tập trung vào yếu tố trình bày văn bản. Lorem Ipsum có ưu điểm hơn so với đoạn văn bản chỉ gồm nội dung kiểu "Nội dung, nội dung, nội dung" là nó khiến văn bản giống thật hơn, bình thường hơn. Nhiều phần mềm thiết kế giao diện web và dàn trang ngày nay đã sử dụng Lorem Ipsum làm đoạn văn bản giả, và nếu bạn thử tìm các đoạn "Lorem ipsum" trên mạng thì sẽ khám phá ra nhiều trang web hiện vẫn đang trong quá trình xây dựng. Có nhiều phiên bản khác nhau đã xuất hiện, đôi khi do vô tình, nhiều khi do cố ý (xen thêm vào những câu hài hước hay thông tục).</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        .row::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        [class*="col-"]{
+            float: left;
+        }
+        .col-1 {width: 8.33%; }
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%; }
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .Col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10{width: 83.33%;}
+        .col-11 {width: 91.66%;}
+
+        .col-12 {width: 100%;}
+        .header{
+            height: 40px;
+            background-color: black;
+            color: white;
+        }
+        .header ul li{
+            float: left;
+            padding: 10px 20px;
+            list-style-type: none;
+        }
+        .header .login{
+            position: absolute;
+            right: 20px;
+        }
+        .content-link{
+            height: 500px;
+            background-color: #B7B7B7;
+            text-align: center;
+        }
+        .content-link .link{
+            padding: 10px;
+        }
+        .content-link a{
+            text-decoration: none;
+        }
+        .content-comment{
+            height: 500px;
+            padding: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .content-comment h1{
+            padding: 0 0 10px;
+        }
+        .content-button{
+            height: 500px;
+            background-color: #B7B7B7;
+            text-align: center;
+        }
+        .content-button .button{
+            padding: 10px;
+        }
+        .content-button button{
+            padding: 15px 50px;
+        }
+        .footer{
+            height: 60px;
+            background-color: #75757c;
+            text-align: center;
+        }
+        .footer h4{
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="row">
+            <div class="col-12">
+                <ul>
+                    <li>Logo</li>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Projects</li>
+                    <li>Concact</li>
+                    <li><span class="login">Login</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="row">
+            <div class="col-2 content-link">
+                <div class="row">
+                    <div class="col-12 link">
+                        <a href="#">link</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 link">
+                        <a href="#">link</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 link">
+                        <a href="#">link</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-8">
+                <div class="row">
+                    <div class="col-12 content-comment">
+                        <h1>Welcome</h1>
+                        <p>Chúng ta vẫn biết rằng, làm việc với một đoạn văn bản dễ đọc và rõ nghĩa dễ gây rối trí và cản trở việc tập trung vào yếu tố trình bày văn bản. Lorem Ipsum có ưu điểm hơn so với đoạn văn bản chỉ gồm nội dung kiểu "Nội dung, nội dung, nội dung" là nó khiến văn bản giống thật hơn, bình thường hơn. Nhiều phần mềm thiết kế giao diện web và dàn trang ngày nay đã sử dụng Lorem Ipsum làm đoạn văn bản giả, và nếu bạn thử tìm các đoạn "Lorem ipsum" trên mạng thì sẽ khám phá ra nhiều trang web hiện vẫn đang trong quá trình xây dựng. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 content-button">
+                <div class="row">
+                    <div class="col-12 button">
+                        <button>ADS</button>
+                    </div>
+                    <div class="col-12 button">
+                        <button>ADS</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="row">
+            <div class="rol-12">
+                <h4>Footer Text</h4>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
